@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Popup from './popup';
 
 class PortfolioTest extends Component {
     constructor(props) {
@@ -27,7 +28,7 @@ class PortfolioTest extends Component {
                 name: "Trähusarkitekten",
                 caption: "Logotyp Grafisk profil Webbdesign WordPress",
                 info: "Arkitektbyrå som behövde en ny hemsida. Jag har tagit fram den grafiska designen, logotypen och gjort webbdesignen till dem. Byggd i WordPress.",
-                image: '/images/responsive-trahusarkitekten.gif',
+                image: '/images/trahusarkitekten.jpg',
                 url: 'https://trahusarkitekten.se'
             },
             {
@@ -61,16 +62,28 @@ class PortfolioTest extends Component {
                 caption: "HTML CSS Responsive",
                 info: "Skolprojekt. Mitt första projekt, kommer ihåg hur ingenting blev som jag ville till en början. Byggd i HTML och CSS. Uppdraget var att bygga en bokhandel, likt bokus.",
                 image: '/images/bokhandel.jpg',
+                responsive: '/images/responsive-min-bok.jpg',
                 // url: 'https://nyckelhus.se'
             },
         ];
 
-        this.state = { posts };
-
-        // post.url = true : div.style.display = 'inline' ? div.style.display = 'none';
-
-
+        this.state = {
+            posts,
+            showPopup: false
+        };
     }
+    togglePopup() {
+        this.setState({
+            showPopup: !this.state.showPopup
+        });
+    }
+
+
+
+    // post.url = true : div.style.display = 'inline' ? div.style.display = 'none';
+
+
+
 
     render() {
         return (
@@ -81,10 +94,11 @@ class PortfolioTest extends Component {
                     <p className='portfolio-info'>Min portfolio innehåller inte så många projekt för tillfället. Började studera frontend hösten 2017, och knappt ett år senare bygger jag min portfolio själv i React. Är faktiskt lite imponerad och stolt över mig själv. Mina allra första projekt hittar du längst ner på listan, det är ganska så stor skillnad på kvalitet och framförallt hastigheten jag bygger i nu. Fler hopp- och lekprojekt finns på Github. Har några pågående projekt på min praktik-plats just nu också.</p>
                 </div >
 
-                <div className='container-fluid portfolio-items top-level row'>
+                <div className='container top-level row'>
 
                     {this.state.posts.map((post) =>
-                        <div key={post.id} className='col-md-4 portfolio-items'>
+                        <div onClick={this.togglePopup.bind(this)} key={post.id} id={post.id} className='col-md-4 portfolio-items'>
+                            {/* <div key={post.id} className='col-md-4 portfolio-items'> */}
                             <div className='portfolio-overlay'>
                                 <img src={post.image} alt="" />
                             </div>
@@ -92,9 +106,24 @@ class PortfolioTest extends Component {
                                 <h4>{post.name}</h4>
                                 <p className='caption'>{post.caption}</p>
                             </div>
+
+
+
+                            {
+                                this.state.showPopup ?
+                                    <Popup key={post.id}
+                                        name={post.name}
+                                        caption={post.caption}
+                                        info={post.info}
+                                        responsive={post.responsive}
+
+
+                                    />
+                                    : null
+                            }
                         </div>
                     )}
-                    <div className='portfolio-bottom'></div>
+                    {/* <div className='portfolio-bottom'></div> */}
 
                     {/* <div className='col-md-4'>
                         <img src="/images/contact.jpg" alt="" />

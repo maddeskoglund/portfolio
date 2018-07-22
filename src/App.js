@@ -4,6 +4,7 @@ import Header from './components/header';
 import Portfolio from './components/portfolio';
 import PortfolioTest from './components/portfolio-test';
 import Footer from './components/footer';
+import Popup from './components/popup';
 
 
 
@@ -22,6 +23,7 @@ class App extends Component {
         {/* <Portfolio /> */}
         <PortfolioTest />
         <Footer />
+        {/* <Popup /> */}
 
       </div>
 
