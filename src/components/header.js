@@ -36,7 +36,7 @@ class Header extends Component {
                         <Link to='/cv'>CV</Link>
                         <Link to='/about'>Om mig</Link>
                         <Link to='/contact'>Kontakt</Link>
-                        <a onClick={this.showSettings} className="menu-item--small" href=""></a>
+                        <a onClick={this.showSettings} className="menu-item--small" href=""> </a>
                     </Menu>
                 </div >
             </div >

@@ -8,28 +8,31 @@ class Contact extends Component {
     render() {
         return (
             <div className='contact'>
-                <Header />
-                <div className='container-fluid'>
-                    <img src="/images/contact.jpg" alt="" />
-                </div>
+                <div className='footer-adj'>
 
-                <div className='container'>
-                    <h1>Kontakt</h1>
-                    <div className='row'>
+                    <Header />
+                    <div className='container-fluid'>
+                        <img src="/images/contact.jpg" alt="" />
+                    </div>
 
-                        <div className='col-md-6'>
-                            <span><FaEnvelope /></span>
-                            <p><a href="mailto:madelein.skoglund@gmail.com">madelein.skoglund@gmail.com</a></p>
-                        </div>
-                        <div className='col-md-6'>
-                            <span><FaPhone /></span>
-                            <p><a href="tel:0704404060">070 440 40 60</a></p>
+                    <div className='container'>
+                        <h1>Kontakt</h1>
+                        <div className='row'>
+
+                            <div className='col-md-6'>
+                                <span><FaEnvelope /></span>
+                                <p><a href="mailto:madelein.skoglund@gmail.com">madelein.skoglund@gmail.com</a></p>
+                            </div>
+                            <div className='col-md-6'>
+                                <span><FaPhone /></span>
+                                <p><a href="tel:0704404060">070 440 40 60</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <Footer />
+                    <Footer />
+                </div >
             </div >
 
         )

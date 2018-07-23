@@ -5,7 +5,7 @@ class Popup extends Component {
     render() {
         return (
             <div className='popup'>
-                <div className='inner-popup' key={this.props.key}>
+                <div className='inner-popup' >
                     <div className='popup-image'>
 
                         <img src={this.props.responsive} alt="" />

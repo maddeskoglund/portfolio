@@ -9,6 +9,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import About from './components/about';
 import Contact from './components/contact';
 import Cv from './components/cv';
+import Whoops from './components/whoops';
 
 render((
 
@@ -20,6 +21,7 @@ render((
             <Route path='/about' component={About} />
             <Route path='/contact' component={Contact} />
             <Route path='/cv' component={Cv} />
+            <Route component={Whoops} />
         </Switch>
 
     </BrowserRouter>

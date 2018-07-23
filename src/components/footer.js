@@ -12,7 +12,7 @@ class Footer extends Component {
                 <div className='container'>
                     <div className='row'>
 
-                        <div className='contact item-1 col-4'><a href='https://github.com/maddeskoglund' target="_blank"><FaGithub /></a></div>
+                        <div className='contact item-1 col-4'><a href='https://github.com/maddeskoglund' target="_blank" rel="noopener noreferrer"><FaGithub /></a></div>
                         <div className='contact item-2 col-4'><a href="mailto:madelein.skoglund@gmail.com"><FaEnvelope /></a></div>
                         <div className='contact item-3 col-4'><a href="tel:0704404060"><FaPhone /></a></div>
                     </div>
