@@ -14,7 +14,8 @@ class PortfolioTest extends Component {
                 info: "Du ser den live nu! Kul att få jobba med React igen, jag gillar det. Inte så avancerat den här gången, men mycket snabbare och smidigare den här gången.",
                 image: '/images/madeleinskoglund.jpg',
                 // responsive: '/images/responsive-blogg.jpg',                
-                // url: ''
+                // url: '',
+                popup: false
             },
             {
                 id: "2",
@@ -39,7 +40,7 @@ class PortfolioTest extends Component {
                 name: "Nyckelhus",
                 caption: "Logotyp Grafisk profil Webbdesign WordPress",
                 info: "Hustillverkare som delvis ska utöka sin verksamhet och behövde därför en ny hemsida. Jag har tagit fram den grafiska designen, logotypen och gjort webbdesignen till dem. Jag har även skrivit en hel del av texterna. Husmodeller kommer att läggas till inom kort. Byggd i WordPress.",
-                image: '/images/responsive-nyckelhus.gif',
+                image: '/images/nyckelhus.jpg',
                 responsive: '/images/responsive-nyckelhus.gif',
                 url: 'https://nyckelhus.se'
 
@@ -49,7 +50,7 @@ class PortfolioTest extends Component {
                 name: "Lilla Gilbert",
                 caption: "Logotyp Grafisk profil Webbdesign WordPress",
                 info: "Skolprojekt. Uppdrag; Bygg en webbshop med minst en produkt. Slutligen hamnade mitt val på posters för barn, då jag tycker att det saknas söta posters på marknaden. Gjorde en del illustrationer i Adobe Illustrator. Tyvärr väldigt seg, lägger skulden på webbhotellet. Byggd i WordPress.",
-                image: '/images/responsive-lillagilbert.gif',
+                image: '/images/lillagilbert.jpg',
                 responsive: '/images/responsive-lillagilbert.gif',
                 url: 'https://www.lillagilbert.se'
             },
@@ -67,7 +68,7 @@ class PortfolioTest extends Component {
                 name: "Bokhandel i HTML / CSS",
                 caption: "HTML CSS Responsive",
                 info: "Skolprojekt. Mitt första projekt, kommer ihåg hur ingenting blev som jag ville till en början. Byggd i HTML och CSS. Uppdraget var att bygga en bokhandel, likt bokus.",
-                image: '/images/bokhandel.jpg',
+                image: '/images/min-bok.jpg',
                 responsive: '/images/responsive-min-bok.jpg',
                 // url: 'https://nyckelhus.se'
             },
@@ -82,6 +83,8 @@ class PortfolioTest extends Component {
     togglePopup() {
         this.setState({
             showPopup: !this.state.showPopup
+            // showPopup: !this.state.posts.popup
+            // !this.state.post.popup: true;
         });
 
     }
@@ -109,7 +112,7 @@ class PortfolioTest extends Component {
                     {this.state.posts.map((post) =>
                         <div onClick={this.togglePopup.bind(this)} key={post.id} className='col-md-4 portfolio-items'>
                             {/* <div key={post.id} className='col-md-4 portfolio-items'> */}
-                            <div className='portfolio-overlay'>
+                            <div className='img-box'>
                                 <img src={post.image} alt="" />
                             </div>
                             <div className='portfolio-bottom'>
@@ -123,6 +126,7 @@ class PortfolioTest extends Component {
                             {
                                 this.state.showPopup ?
                                     <Popup key={post.id}
+
                                         name={post.name}
                                         caption={post.caption}
                                         info={post.info}

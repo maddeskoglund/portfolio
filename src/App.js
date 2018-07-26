@@ -4,15 +4,9 @@ import Header from './components/header';
 import PortfolioTest from './components/portfolio-test';
 import Footer from './components/footer';
 
-
-
-
 class App extends Component {
   render() {
     return (
-
-
-
       <div>
         <Header />
         <div id='home'>

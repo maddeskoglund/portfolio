@@ -50,16 +50,14 @@ class Cv extends Component {
                                     <li>CSS3</li>
                                     <li>Javascript, nybörjare</li>
                                     <li>React &amp; Redux, nybörjare</li>
-                                    <li>JSX ?</li>
-                                    <li>ES6 ?</li>
-                                    <li>UI ?</li>
-                                    <li>UX ?</li>
-                                    <li>SEO ?</li>
-                                    <li>Command Line ?</li>
-                                    <li>Google Analytics ?</li>
+                                    <li>JSX</li>
+                                    <li>ES6</li>
+                                    <li>UI</li>
+                                    <li>UX</li>
+                                    <li>SEO</li>
+                                    <li>Google Analytics</li>
                                     <li>Adobe Illustrator</li>
                                     <li>Adobe Photoshop &amp; InDesign, grundläggande kunskap</li>
-                                    <li>Kan jag nggt om Node, mysql, filezilla, elephant??</li>
                                 </ul>
                                 <h3>Kompetenser, utanför frontend</h3>
                                 <ul className='competence'>
