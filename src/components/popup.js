@@ -5,7 +5,7 @@ class Popup extends Component {
     render() {
         return (
             <div className='popup'>
-                <div className='inner-popup' >
+                <div id={this.props.activePost} className='inner-popup' >
                     <div className='popup-image'>
 
                         <img src={this.props.responsive} alt="" />
@@ -24,6 +24,7 @@ class Popup extends Component {
                 </div>
             </div>
         )
+
     }
 
 }
