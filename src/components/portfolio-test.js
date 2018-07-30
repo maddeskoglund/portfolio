@@ -10,24 +10,26 @@ class PortfolioTest extends Component {
         this.state = {
             posts,
             showPopup: false,
+            activePost: null
 
         };
         console.info('Hej! Välkommen till min portfolio. Hör gärna av dig om du vill veta mer om mig!')
     }
 
     togglePopup = () => {
-        key: posts.id
         this.setState({
-            // clickedKey: id,
             showPopup: !this.state.showPopup,
-            // activePost: this.state.posts.id
-            activePost: posts.id
-
-
-
+            activePost: this.state.posts.id
         });
-        // console.log(id)
     }
+
+
+    // showPopup(e, i) {
+    //     this.setState({ activePost: i })
+    // }
+    // hidePopup() {
+    //     this.setState({ activePost: null })
+    // }
 
 
 
@@ -61,22 +63,21 @@ class PortfolioTest extends Component {
                             </div>
                             <div className='hidden-desktop'><p>{post.info}</p></div>
 
-                            {
-                                this.state.showPopup &&
-                                <Popup
-                                    // post={this.state.posts}
-                                    name={post.name}
-                                    caption={post.caption}
-                                    info={post.info}
-                                    responsive={post.responsive}
-                                    activePost={this.state.activePost}
-                                />
-                            }
+
+
+
 
 
                         </div>
                     )}
+                    {
+                        this.state.showPopup && this.state.activePost ?
+                            <Popup
+                                post={this.state.posts}
 
+                            />
+                            : null
+                    }
 
 
                 </div>
