@@ -7,29 +7,32 @@ class PortfolioTest extends Component {
     constructor(props) {
         super(props);
 
+
+
         this.state = {
             posts,
             showPopup: false,
-            activePost: null
+            // activePost: null
 
         };
         console.info('Hej! Välkommen till min portfolio. Hör gärna av dig om du vill veta mer om mig!')
     }
 
-    togglePopup = () => {
+    togglePopup = (event) => {
+        const id = event.target.id;
+
+        const activePost = this.state.posts.filter(posts => posts.id === id);
+
         this.setState({
+            // activePost: this.state.posts.filter(post => post.id === id),
+
             showPopup: !this.state.showPopup,
-            activePost: this.state.posts.id
+            active: ({ activePost })
         });
     }
 
 
-    // showPopup(e, i) {
-    //     this.setState({ activePost: i })
-    // }
-    // hidePopup() {
-    //     this.setState({ activePost: null })
-    // }
+
 
 
 
@@ -50,9 +53,7 @@ class PortfolioTest extends Component {
                 <div className='container top-level row'>
 
                     {posts.map((post, i) =>
-                        // <div onClick={(i) => this.toggle(i)} key={i} className='col-md-4 portfolio-items'>
-                        <div onClick={this.togglePopup} key={i} className='col-md-4 portfolio-items'>
-                            {/* <div onClick={this.togglePopup.bind(this, i)} key={post.id} className='col-md-4 portfolio-items'> */}
+                        <div onClick={this.togglePopup} key={post.id} className='col-md-4 portfolio-items'>
 
                             <div className='img-box'>
                                 <img src={post.image} alt="" />
@@ -71,12 +72,12 @@ class PortfolioTest extends Component {
                         </div>
                     )}
                     {
-                        this.state.showPopup && this.state.activePost ?
-                            <Popup
-                                post={this.state.posts}
+                        this.state.showPopup &&
+                        < Popup
 
-                            />
-                            : null
+                            post={this.state.active}
+
+                        />
                     }
 
 
