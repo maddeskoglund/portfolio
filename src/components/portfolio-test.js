@@ -12,25 +12,28 @@ class PortfolioTest extends Component {
         this.state = {
             posts,
             showPopup: false,
-            // activePost: null
+            active: null
 
         };
         console.info('Hej! Välkommen till min portfolio. Hör gärna av dig om du vill veta mer om mig!')
     }
 
-    togglePopup = (event) => {
-        const id = event.target.id;
-
+    togglePopup = (e) => {
+        const id = e.target.id;
         const activePost = this.state.posts.filter(posts => posts.id === id);
+
+        console.log(id);
+        console.log(activePost);
 
         this.setState({
             // activePost: this.state.posts.filter(post => post.id === id),
 
             showPopup: !this.state.showPopup,
             active: ({ activePost })
+
+
         });
     }
-
 
 
 
@@ -52,8 +55,8 @@ class PortfolioTest extends Component {
 
                 <div className='container top-level row'>
 
-                    {posts.map((post, i) =>
-                        <div onClick={this.togglePopup} key={post.id} className='col-md-4 portfolio-items'>
+                    {posts.map((post, e) =>
+                        <div onClick={this.togglePopup} key={post.id} id={post.id} className='col-md-4 portfolio-items' >
 
                             <div className='img-box'>
                                 <img src={post.image} alt="" />
@@ -71,13 +74,17 @@ class PortfolioTest extends Component {
 
                         </div>
                     )}
+
                     {
                         this.state.showPopup &&
                         < Popup
 
-                            post={this.state.active}
+                            active={this.state.active}
+                            post={this.state.posts}
+
 
                         />
+
                     }
 
 

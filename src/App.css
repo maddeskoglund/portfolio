@@ -415,6 +415,21 @@ div.cv-right {
 
 /************** Portfolio-Test **********************/
 
+.datalist{
+  border: 2px solid green;
+  /* display: flex;
+  flex-wrap: flex; */
+  
+}
+
+#portfolio-item {
+border: 2px solid red;
+}
+
+.portfolio-items {
+  border: 2px solid pink;
+}
+
 
 #portfolio img {
   object-fit: cover;
@@ -435,6 +450,8 @@ div.cv-right {
 
 #portfolio .row {
   margin: 0 auto;
+  display: flex;
+  flex-wrap: flex;
 }
 
 .portfolio-items {
@@ -495,7 +512,7 @@ div.cv-right {
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: rgba(0,0,0, 0.1);
+  background-color: rgba(0,0,0, 0.5);
 }
 
 .inner-popup {
@@ -535,6 +552,17 @@ width: 45%;
 .popup-info {
   width: 45%;
   margin-left: 50px;
+}
+
+.popup-close {
+  font-size: 40px;
+  color: #343434;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: #fff;
+  border: 2px solid #343434;
+  border-radius: 50%;
 }
 
 

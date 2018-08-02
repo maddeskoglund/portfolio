@@ -1,32 +1,19 @@
-import React, { Component } from 'react';
-
-class Popup extends Component {
+import React from 'react';
 
 
-    render() {
-        return (
-            <div className='popup'>
-                <div className='inner-popup' >
-                    <div className='popup-image'>
-
-                        <img src={this.props.responsive} alt="" />
-
-                    </div>
-                    <div className='popup-info'>
-                        <h4>{this.props.name}</h4>
-                        <p className='caption'>{this.props.caption}</p>
-
-                        <p>{this.props.info}</p>
-                    </div>
-
-
-
-
-                </div>
+const Popup = ({ post }) => (
+    <div className='popup'>
+        <div className='inner-popup' >
+            <div className='popup-image'>
+                <img src={post.responsive} alt="" />
             </div>
-        )
+            <div className='popup-info'>
+                <h4>{post.name}</h4>
+                <p className='caption'>{post.caption}</p>
+                <p>{post.info}</p>
+            </div>
+        </div>
+    </div>
+)
 
-    }
-
-}
 export default Popup;
