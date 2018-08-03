@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import { HashLink as Link } from 'react-router-hash-link';
-
-
 
 class Header extends Component {
     showSettings(event) {
@@ -14,12 +11,7 @@ class Header extends Component {
     }
 
     render() {
-
-
-
         return (
-
-
             <div className='header'>
                 <div className='container'>
                     <span className='brand'><Link to='/'> <b>Madelein</b>&nbsp;Skoglund</Link></span>

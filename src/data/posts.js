@@ -5,9 +5,8 @@ const posts = [
         caption: "React PWA JSX CSS Javascript ES6",
         info: "Du ser den live nu! Kul att få jobba med React igen, jag gillar det. Inte så avancerat den här gången, men mycket snabbare och smidigare den här gången.",
         image: '/images/madeleinskoglund.jpg',
-        // responsive: '/images/responsive-blogg.jpg',                
-        // url: '',
-        popup: true
+        responsive: '/images/responsive-madeleinskoglund.gif',
+        // url: ''
     },
     {
         id: "2",
@@ -15,7 +14,7 @@ const posts = [
         caption: "React Redux PWA API JSX CSS Javascript ES6",
         info: "En väderapp byggd för skolarbete. Riktigt roligt och svårt att som nybörjare komma in i både Javascript och React samtidigt, efterhand las Redux till också. Appen visar högsta och lägsta temperaturen för tre dagar, icon för typen av väder, nederbörd och medelhastigheten för vindstyrka. API:t hämtar data från SMHI. Du hittar den på mitt Github-konto.",
         image: '/images/weather.jpg',
-        // responsive: '/images/responsive-blogg.jpg',                
+        responsive: '/images/weather.jpg',
         // url: ''                
     },
     {
@@ -41,7 +40,7 @@ const posts = [
         id: "5",
         name: "Lilla Gilbert",
         caption: "Logotyp Grafisk profil Webbdesign WordPress",
-        info: "Skolprojekt. Uppdrag; Bygg en webbshop med minst en produkt. Slutligen hamnade mitt val på posters för barn, då jag tycker att det saknas söta posters på marknaden. Gjorde en del illustrationer i Adobe Illustrator. Tyvärr väldigt seg, lägger skulden på webbhotellet. Byggd i WordPress.",
+        info: "Skolprojekt. Uppdrag; Bygg en webbshop med minst en produkt. Slutligen hamnade mitt val på posters för barn, då jag tycker att det saknas söta posters på marknaden. Gjorde en del illustrationer i Adobe Illustrator. Byggd i WordPress.",
         image: '/images/lillagilbert.jpg',
         responsive: '/images/responsive-lillagilbert.gif',
         url: 'https://www.lillagilbert.se'
@@ -53,7 +52,7 @@ const posts = [
         info: "Skolprojekt. Uppdraget var att bygga en blogg i HTML och CSS. Självklart responsiv.",
         image: '/images/blogg.jpg',
         responsive: '/images/responsive-blogg.jpg',
-        // url: 'http://nyckelhus.se'
+        // url: ''
     },
     {
         id: "7",
@@ -62,7 +61,7 @@ const posts = [
         info: "Skolprojekt. Mitt första projekt, kommer ihåg hur ingenting blev som jag ville till en början. Byggd i HTML och CSS. Uppdraget var att bygga en bokhandel, likt bokus.",
         image: '/images/min-bok.jpg',
         responsive: '/images/responsive-min-bok.jpg',
-        // url: 'https://nyckelhus.se'
+        // url: ''
     },
 ];
 

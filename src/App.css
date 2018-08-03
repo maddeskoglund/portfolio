@@ -174,66 +174,6 @@ span a, span a:hover {
 /* Opera < 12.1 */
 @-o-keyframes fadein { from { opacity: 0; } to   { opacity: 1; } }
 
-
-
-/* Portfolio
-
-.portfolio-info {
-  margin: 0 200px;
-}
-
-#portfolio {
-  padding-top: 80px;
-}
-
-.portfolio h3 {
-  margin: 120px 0 20px;
-}
-
-.caption {
-  font-size: 12px;
-  color: orangered;
-  text-transform: uppercase;
-}
-
-.info {
-  padding-right: 30px;
-  line-height: 20px;  
-} */
-
-/* .portfolio-img {
-  width: 100%;
-}
-
-.portfolio-img img {
-  object-fit: cover;
-  width: 100%;
-}
-
-.portfolio .btn {
-  border: 1px solid orangered;
-  border-radius: 0;
-  color: orangered;
-  width: 100px;
-  margin-top: 20px;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-}
-
-.portfolio .btn a {
-  color: orangered;
-} */
-
-
-.footer-adj{
-/* padding-bottom: 0px; */
-}
-
-
-
 /* Footer */
 
 .footer {
@@ -242,7 +182,6 @@ span a, span a:hover {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 100; 
-  /* position: absolute; */
   position: fixed;
   bottom: 0;
   z-index: -1;
@@ -296,10 +235,10 @@ span a, span a:hover {
 }
 
 .sign {
+  font-family: 'Alex Brush', cursive;
   margin: 0 200px;
-  font-style: italic;
   margin-top: 40px;
-  font-size: 16px;
+  font-size: 26px;
 }
 
 
@@ -413,23 +352,7 @@ div.cv-right {
 }
 
 
-/************** Portfolio-Test **********************/
-
-.datalist{
-  border: 2px solid green;
-  /* display: flex;
-  flex-wrap: flex; */
-  
-}
-
-#portfolio-item {
-border: 2px solid red;
-}
-
-.portfolio-items {
-  border: 2px solid pink;
-}
-
+/************** Portfolio **********************/
 
 #portfolio img {
   object-fit: cover;
@@ -451,7 +374,7 @@ border: 2px solid red;
 #portfolio .row {
   margin: 0 auto;
   display: flex;
-  flex-wrap: flex;
+  justify-content: flex-start;
 }
 
 .portfolio-items {
@@ -537,6 +460,9 @@ border: 2px solid red;
   text-align: left;
   color: #000;
   font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 .inner-popup .caption {
   color: orangered;
@@ -545,13 +471,21 @@ border: 2px solid red;
   padding: 20px 0;
 }
 
-.popup-image {
+.popup-image  {
 width: 45%;
+}
+
+.popup-image img {
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
 }
 
 .popup-info {
   width: 45%;
   margin-left: 50px;
+  margin-top: 30px;
 }
 
 .popup-close {
@@ -564,6 +498,7 @@ width: 45%;
   border: 2px solid #343434;
   border-radius: 50%;
 }
+
 
 
 /********* Mobile ***********'*/
@@ -740,6 +675,194 @@ div.cv-right {
   .container h3 {
     font-size: 1.5rem;
   }
+
+  #showInfo {
+  display: none;
+}
+
+}
+
+
+/************** Ipad **************/
+  @media screen 
+and (min-width : 601px) 
+and (max-width : 1024px)  { 
+
+/* General */
+.container h1 {
+  font-size: 2rem;
+  padding-top: 50px;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+
+  /* header */
+.header .desktop-nav {
+  display: none;
+}
+.header .container{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  box-shadow: 0px 2px 0.5px rgba(0, 0, 0, 0.1)
+}
+/* burger-menu */
+.bm-burger-button {
+  visibility: visible;
+}
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #2c2b2b;
+}
+
+/* Wrapper for item list */
+.bm-item-list a{
+  color: #2c2b2b;
+  
+  /* color: #b8b7ad; */
+  padding: 0.5em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #2c2b2b;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #fff;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  text-transform: uppercase;
+}
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 25px;
+  height: 20px;
+  right: 22px;
+  top: 27px;
+}
+
+.header li a:visited {
+  color: #2c2b2b;
+}
+
+.brand {
+  font-size: 1rem;  
+}
+
+ /* home */
+  .home {
+  height: 500px;
+}
+
+.home-alert {
+  font-size: 2rem;
+  top: 300px;
+  }
+.home-alert span {
+  font-size: 3rem;
+  }
+
+/* portfolio */
+.info {
+  padding-right: 0px; 
+  }
+.portfolio-info {
+  margin: 0 50px;
+  }
+.portfolio h3 {
+  margin: 80px 0 20px;
+  }
+
+.hidden-desktop {
+  display: block;
+  padding: 20px 0;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}  
+
+#showInfo {
+  display: none;
+}
+
+  /* about */
+.container-fluid img {
+  height: 300px; 
+  margin-top: 80px;
+}
+.about-info {
+  margin: 0 15px;
+}
+.sign {
+  margin: 30px 15px;
+}
+
+
+  /* cv */
+.cv img {
+  height: 300px;
+  }
+div.cv-left {
+  padding-right: 15px; 
+  }
+div.cv-right {
+  padding-left: 15px; 
+  }
+
+
+  /* contact */
+.contact img {
+  height: 300px;
+}
+.contact-info h1 {
+  padding-top: 50px;
+
+}
+.contact-info {
+  text-align: center;
+}
+.contact-info span {
+  font-size: 50px;
+  color: #818181;
+}
+.contact-info p {
+  margin-top: 20px;
+}
+.contact .footer {
+  margin-top: 50px;
+}
+
+  /* footer */
+
+  .container h3 {
+    font-size: 1.5rem;
+  }
+
+
 
 }
 

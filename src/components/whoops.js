@@ -3,9 +3,7 @@ import Header from './header';
 import Footer from './footer';
 import { HashLink as Link } from 'react-router-hash-link';
 
-
 class Whoops extends Component {
-
     render() {
         return (
             <div className='whoops'>

@@ -6,8 +6,6 @@ import FaGithub from 'react-icons/lib/fa/github';
 class Footer extends Component {
     render() {
         return (
-
-
             <div className='container-fluid footer'>
                 <div className='container'>
                     <div className='row'>
@@ -18,16 +16,9 @@ class Footer extends Component {
                     </div>
                     <div className='copy'><p>© {new Date().getFullYear()} Madelein Skoglund</p></div>
                 </div>
-
-
-
-
-
             </div>
-
         )
     }
 }
-
 
 export default Footer;
